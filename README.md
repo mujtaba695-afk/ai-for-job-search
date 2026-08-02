@@ -1,22 +1,24 @@
-# 🎯 AI Job Search with 75 Career Agent Skills
+# 🎯 AI Job Search with 48 Career Agent Skills
 
-An open-source, autonomous **AI Job Search Engine with 75 Career Agent Skills, Live ATS Verifier & Playwright Resume Exporter** designed for senior professionals, performance marketing leads, and growth marketers.
+An open-source, autonomous **AI Job Search Engine with 48 Career Agent Skills, Live ATS Verifier & Playwright Resume Exporter** designed for senior professionals, performance marketing leads, and growth marketers.
 
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![Playwright](https://img.shields.io/badge/Playwright-Chromium-green.svg)](https://playwright.dev/)
-[![Career Agent Skills](https://img.shields.io/badge/Career%20Agent%20Skills-75%2B-purple.svg)](skills/)
+[![Career Agent Skills](https://img.shields.io/badge/Career%20Agent%20Skills-48-purple.svg)](skills/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---
 
 ## 🌟 Key Features
 
-### 1. 🤖 75 Career Agent Skill Modules (`skills/`)
+### 1. 🤖 48 Career Agent Skill Modules (`skills/`)
 Automates every stage of the executive job hunt, from keyword parsing to compensation negotiation:
-*   **Job Discovery Skills**: `linkedin-jobs`, `indeed-jobs`, `glassdoor-jobs`, `bayt-jobs`, `seek-jobs`, `stepstone-jobs`, `naukri-jobs`, `jobsdb-jobs`, `google-jobs`, `job-alert-monitor`.
-*   **ATS & Resume Engineering**: `ats-checker`, `resume-parser`, `resume-keyword-extractor`, `executive-resume-writer`, `portfolio-builder`, `portfolio-website-generator`.
-*   **Application & Outreach Skills**: `cover-letter-writer`, `referral-request-writer`, `recruiter-response-handler`, `interview-thank-you`, `company-researcher`.
-*   **Interview & Negotiation Skills**: `interview-prep`, `marketing-case-study`, `salary-negotiator`, `salary-research`, `offer-evaluator`, `resignation-letter`.
+*   **Job Discovery Skills**: `linkedin-jobs`, `indeed-jobs`, `glassdoor-jobs`, `bayt-jobs`, `seek-jobs`, `stepstone-jobs`, `naukri-jobs`, `jobsdb-jobs`, `boss-zhipin`, `google-jobs`, `remote-jobs`, `job-alert-monitor`.
+*   **ATS & Resume Engineering**: `ats-checker`, `resume-parser`, `resume-keyword-extractor`, `resume-tailor`, `resume-reframer`, `executive-job-search-and-tailor`, `portfolio-builder`, `portfolio-website-generator`.
+*   **Application & Outreach Skills**: `cover-letter-writer`, `referral-request-writer`, `recruiter-response-handler`, `interview-thank-you`, `company-researcher`, `networking-strategy`.
+*   **Interview & Negotiation Skills**: `interview-prep`, `interview-presentation-builder`, `marketing-case-study`, `salary-negotiator`, `salary-research`, `offer-evaluator`, `resignation-letter`.
+
+See [`skills/README.md`](skills/README.md) for the complete catalog of all 48 skills.
 
 ### 2. ⚡ Real-Time Live ATS Verification Engine
 Bypasses stale third-party caches by querying official **Greenhouse, Ashby, Lever, SmartRecruiters, and Workday APIs** directly.
@@ -53,6 +55,18 @@ playwright install chromium
 # Run System Sanity Test
 python3 tests/test_pipeline.py
 ```
+
+The sanity test prints a per-check `PASS`/`FAIL` line and exits non-zero if
+anything is missing, so it can also be wired into CI.
+
+---
+
+## 🧠 How the Skills Work
+
+The skills in this repository are **Markdown instruction modules**, not
+executable Python. Each `skills/<name>/SKILL.md` carries YAML frontmatter and a
+workflow an AI coding agent follows. Point your agent at a skill directory (or
+load it into a compatible agent runtime) and ask for the task in plain language.
 
 See [USER_GUIDE.md](USER_GUIDE.md) for full usage instructions.
 

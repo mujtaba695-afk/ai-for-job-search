@@ -1,47 +1,88 @@
-# 🧠 50+ Marketing & Career Agent Skill Modules
+# 🧠 48 Career Agent Skill Modules
 
-This directory contains **75 production-ready skill modules** designed for AI coding agents and job seekers to automate every stage of executive job search, ATS auditing, resume tailoring, outreach, and interview negotiation.
+This directory contains **48 skill modules** for AI coding agents, covering every
+stage of the job search: discovery, ATS auditing, resume tailoring, outreach,
+interview prep, and offer negotiation.
+
+Every skill listed below exists as a directory in this folder. Each contains a
+`SKILL.md` with YAML frontmatter and the workflow the agent should follow.
 
 ---
 
-## 📋 Skill Catalog Index
+## 📋 Skill Catalog
 
-### 1. ATS & Resume Engineering
-* `ats-checker`: ATS compatibility scanner and format validator.
-* `resume-parser`: Extracts structured experience, skills, and metrics from resumes.
-* `resume-keyword-extractor`: Identifies high-density keywords from JDs.
-* `executive-resume-writer`: Crafts executive 2-page resumes with quantified metrics.
-* `portfolio-builder`: Creates performance marketing campaign case studies.
-* `portfolio-website-generator`: Generates single-page HTML portfolio websites.
+### 1. ATS & Resume Engineering (8)
+* `ats-checker`: Check resumes for ATS compatibility and optimization.
+* `resume-parser`: Parse, analyze, and structure resumes/CVs.
+* `resume-keyword-extractor`: Extract and analyze keywords from job descriptions for resume optimization.
+* `resume-tailor`: Tailor resumes to match job descriptions with near-100% alignment.
+* `resume-reframer`: Reframe existing experience for target roles without fabricating anything.
+* `executive-job-search-and-tailor`: End-to-end ATS discovery (Greenhouse, Lever, Ashby, Workday), recency filtering, tracking, and tailored 2-page output.
+* `portfolio-builder`: Build marketing portfolios and campaign case studies.
+* `portfolio-website-generator`: Generate a professional portfolio website.
 
-### 2. Job Discovery & Regional Job Boards
-* `linkedin-jobs`: Optimized search for LinkedIn performance marketing roles.
+### 2. Job Discovery & Regional Job Boards (12)
+* `job-search`: Broad search across performance marketing, paid media, PPC, SEM, programmatic, and related roles.
+* `linkedin-jobs`: Optimized LinkedIn Jobs search.
 * `indeed-jobs`: Search filters and salary insights for Indeed postings.
-* `glassdoor-jobs`: Job search integrated with company review ratings.
-* `bayt-jobs`: Specialized search for Dubai, Saudi Arabia, and GCC/MENA roles.
-* `seek-jobs`: Job search tailored for Australia & New Zealand (ANZ).
-* `stepstone-jobs`: Job search tailored for DACH (Germany, Austria, Switzerland) & Europe.
-* `naukri-jobs`: Job search tailored for India tech & marketing hubs.
-* `jobsdb-jobs`: Job search tailored for Southeast Asia (Singapore, Hong Kong).
+* `glassdoor-jobs`: Job search with integrated salary data, reviews, and interview insight.
 * `google-jobs`: Broad aggregator search across direct company career pages.
+* `remote-jobs`: Remote-specific job boards and platforms.
+* `bayt-jobs`: Bayt.com and GulfTalent — Middle East & North Africa (MENA).
+* `seek-jobs`: Seek.com.au — Australia & New Zealand.
+* `stepstone-jobs`: StepStone, Xing Jobs, and European boards — Germany, Austria, Switzerland.
+* `naukri-jobs`: Naukri.com and Foundit — India.
+* `jobsdb-jobs`: JobsDB and JobStreet — Southeast Asia.
+* `boss-zhipin`: BOSS 直聘, 拉勾, and 猎聘 — China.
 
-### 3. Application & Recruiter Outreach
-* `cover-letter-writer`: Generates strategic cover letters mapped to key JD pillars.
-* `referral-request-writer`: Crafts personalized employee referral requests.
-* `recruiter-response-handler`: Drafts professional responses to recruiter outreach.
-* `company-researcher`: Deep-dives into company culture, tech stack, and recent campaigns.
-* `interview-thank-you`: Post-interview follow-up messages.
+### 3. Job Analysis & Market Intelligence (6)
+* `job-posting-analyzer`: Deep-analyze postings for real requirements and red flags.
+* `job-market-intelligence`: Real-time job market intelligence.
+* `skills-gap-analyzer`: Analyze gaps between current skills and target roles.
+* `competitor-candidate-analysis`: Analyze what competing candidates likely look like.
+* `job-alert-monitor`: Set up automated job monitoring and alerts.
+* `job-board-alert-aggregator`: Aggregate and deduplicate listings across multiple alerts.
 
-### 4. Interview Prep & Compensation Negotiation
-* `interview-prep`: Generates role-specific questions, STAR framework answers, and mock scenarios.
-* `marketing-case-study`: Builds presentation-ready campaign breakdowns.
-* `salary-negotiator`: Market salary research and negotiation scripts.
-* `salary-research`: Real-time salary benchmark analysis across global markets.
-* `offer-evaluator`: Evaluates total compensation (base, bonus, equity, benefits).
+### 4. Application & Recruiter Outreach (5)
+* `cover-letter-writer`: Generate tailored cover letters.
+* `referral-request-writer`: Craft personalized employee referral requests.
+* `recruiter-response-handler`: Draft professional responses to recruiter outreach.
+* `company-researcher`: Research companies for job applications.
+* `networking-strategy`: Develop networking strategies and outreach messages.
+
+### 5. Interview Prep (4)
+* `interview-prep`: Role-specific questions, STAR answers, and mock scenarios.
+* `interview-presentation-builder`: Build interview presentations and case study decks.
+* `interview-thank-you`: Personalized post-interview thank-you emails.
+* `marketing-case-study`: Detailed marketing and paid media campaign case studies.
+
+### 6. Compensation & Offers (5)
+* `salary-research`: Real-time salary benchmarks across global markets.
+* `salary-negotiator`: Salary range research and negotiation strategies.
+* `offer-evaluator`: Evaluate and compare total compensation.
+* `freelance-rate-calculator`: Calculate freelance and contract rates.
 * `resignation-letter`: Professional resignation letter templates.
+
+### 7. Tracking & Accountability (3)
+* `job-tracker`: Track applications, interview stages, follow-ups, and outcomes.
+* `application-tracker-spreadsheet`: Create and manage a detailed application tracking spreadsheet.
+* `job-search-accountability`: Accountability and progress tracking for job seekers.
+
+### 8. Personal Brand & Career Growth (5)
+* `linkedin-optimizer`: Optimize LinkedIn profiles for target roles.
+* `linkedin-content-strategy`: Build thought leadership and visibility on LinkedIn.
+* `personal-brand-auditor`: Audit and improve online presence and personal brand.
+* `career-coach`: Career coaching and strategic guidance.
+* `marketing-certification-guide`: Guide to relevant marketing certifications.
 
 ---
 
 ## 🛠️ How to Load a Skill
 
-Each skill directory contains a `SKILL.md` file with detailed instructions, prompt rules, and workflow steps. To use a skill, inspect its `SKILL.md` file or integrate it into your AI agent environment.
+Each skill directory contains a `SKILL.md` with detailed instructions, prompt
+rules, and workflow steps. To use a skill, point your AI agent at its `SKILL.md`
+path or load the directory into a compatible agent runtime, then describe your
+task in plain language.
+
+These are instruction modules, not executable scripts — there is nothing to
+`python3` here.

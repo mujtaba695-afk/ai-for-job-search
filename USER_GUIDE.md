@@ -1,23 +1,27 @@
-# 🚀 User Guide: Open ATS Career Engine & Resume Generator
+# 🚀 User Guide: AI Job Search with Career Agent Skills
 
-Welcome to the **Open ATS Career Engine**. This guide will help you set up the environment, search live job boards, audit residency/visa restrictions, and build tailored PDF and Word application packages.
+Welcome. This guide helps you set up the environment, use the 48 career agent
+skills to search live job boards, audit residency/visa restrictions, and build
+tailored PDF and Word application packages.
 
 ---
 
 ## 📋 Table of Contents
-1. [Prerequisites](#-prerequisites)
+1. [Prerequisites](#️-prerequisites)
 2. [Installation & Setup](#-installation--setup)
 3. [Pre-Flight System Check](#-pre-flight-system-check)
 4. [Configuring Your Profile](#-configuring-your-profile)
-5. [Searching Live Job Boards](#-searching-live-job-boards)
-6. [Analyzing Job Descriptions & ATS Match](#-analyzing-job-descriptions--ats-match)
-7. [Generating Application Packages](#-generating-application-packages)
+5. [Using the Skills](#-using-the-skills)
+6. [Searching Live Job Boards](#-searching-live-job-boards)
+7. [Analyzing Job Descriptions & ATS Match](#-analyzing-job-descriptions--ats-match)
+8. [Generating Application Packages](#-generating-application-packages)
 
 ---
 
 ## 🛠️ Prerequisites
 * **Python 3.10+**
 * **Git**
+* **An AI coding agent** that can read the `SKILL.md` instruction modules
 * **Internet Connection** (for querying live Greenhouse, Lever, Ashby, and SmartRecruiters APIs)
 
 ---
@@ -26,8 +30,8 @@ Welcome to the **Open ATS Career Engine**. This guide will help you set up the e
 
 ```bash
 # Clone the repository
-git clone https://github.com/mujtaba695-afk/marketing-ai-analytics-resume.git
-cd marketing-ai-analytics-resume
+git clone https://github.com/mujtaba695-afk/ai-for-job-search.git
+cd ai-for-job-search
 
 # Create virtual environment
 python3 -m venv .venv
@@ -42,12 +46,16 @@ playwright install chromium
 
 ## 🧪 Pre-Flight System Check
 
-Run the self-diagnostic test to verify Playwright Chromium, Python modules, and API connectors on your machine:
+Run the self-diagnostic to verify your Python version, the Playwright and
+python-docx modules, and live ATS connectivity:
 
 ```bash
 python3 tests/test_pipeline.py
 ```
-*Expected Output: `✅ All Systems Operational: Playwright, ATS Connectors & Exporters ready.`*
+
+Each check prints its own `PASS` or `FAIL` line. On success the script ends with
+`All systems operational: Playwright, ATS connectors & exporters ready.` and
+exits `0`; if any check fails it lists the failures and exits `1`.
 
 ---
 
@@ -57,38 +65,80 @@ python3 tests/test_pipeline.py
    ```bash
    cp config/master_profile.template.json config/master_profile.json
    ```
-2. Open `config/master_profile.json` in your favorite code editor and update your:
+2. Open `config/master_profile.json` in your editor and update your:
    * **Contact Information** (Name, Location, Email, Phone, LinkedIn, Portfolio)
    * **Executive Summary** (3–4 sentence value proposition)
    * **Work History** (Company, Title, Dates, Location, Bullet points with metrics)
    * **Skill Matrix** (Categorized tools, platforms, and methodologies)
 
+`config/master_profile.json` is git-ignored, so your real details stay local.
+
+---
+
+## 🧠 Using the Skills
+
+The 48 modules in `skills/` are **instruction sets for AI agents**, not
+standalone command-line programs. Each `skills/<name>/SKILL.md` contains YAML
+frontmatter (name, description, trigger conditions) followed by the workflow the
+agent should follow.
+
+To use one:
+
+1. Open `skills/README.md` and find the skill matching your task.
+2. Load that skill directory into your AI coding agent, or point the agent at
+   the `SKILL.md` path.
+3. Ask for the task in plain language — for example,
+   *"Use the resume-tailor skill to align my resume to this job description."*
+
 ---
 
 ## 🔎 Searching Live Job Boards
 
-Search live company job boards (Greenhouse, Lever, Ashby, SmartRecruiters) directly to find 100% active roles:
+Use the job discovery skills to search live company boards (Greenhouse, Lever,
+Ashby, SmartRecruiters) and regional aggregators:
 
-```bash
-python3 search_dubai_relocation_jobs.py
-```
-*This verifies `HTTP 200 OK` status and location suitability in real-time.*
+| Region / Source | Skill |
+| --- | --- |
+| Global / LinkedIn | `linkedin-jobs` |
+| Global aggregator | `google-jobs`, `job-search` |
+| Remote-first | `remote-jobs` |
+| US / Global | `indeed-jobs`, `glassdoor-jobs` |
+| MENA & Gulf | `bayt-jobs` |
+| Australia & NZ | `seek-jobs` |
+| DACH & Europe | `stepstone-jobs` |
+| India | `naukri-jobs` |
+| Southeast Asia | `jobsdb-jobs` |
+| China | `boss-zhipin` |
+
+For continuous coverage, combine `job-alert-monitor` with
+`job-board-alert-aggregator` to deduplicate results across sources.
+
+---
+
+## 📊 Analyzing Job Descriptions & ATS Match
+
+Before applying, run a posting through the analysis skills:
+
+1. `job-posting-analyzer` — deep-analyze the posting for real requirements and red flags.
+2. `resume-keyword-extractor` — pull the high-density keywords from the JD.
+3. `ats-checker` — score your resume for ATS compatibility and formatting issues.
+4. `skills-gap-analyzer` — identify gaps between your profile and the target role.
+5. `competitor-candidate-analysis` — understand who else is likely applying.
 
 ---
 
 ## 📑 Generating Application Packages
 
-To build a tailored 2-page PDF & Word resume plus executive cover letter:
+Use the tailoring and outreach skills to build a complete application:
 
-```bash
-python3 build_getyourguide_package.py
-```
+1. `resume-tailor` or `executive-job-search-and-tailor` — align your resume to the JD.
+2. `resume-reframer` — reframe existing experience without fabricating anything.
+3. `cover-letter-writer` — generate a tailored cover letter.
+4. `interview-presentation-builder` — build a case study deck when one is requested.
 
-Generated outputs will be saved in your project folder as:
-* 📄 `Candidate_Resume.pdf` (Pixel-perfect Playwright PDF)
-* 📝 `Candidate_Resume.docx` (Matching Word Document)
-* 📄 `Candidate_Cover_Letter.pdf` (Tailored Cover Letter PDF)
-* 📝 `Candidate_Cover_Letter.docx` (Matching Cover Letter DOCX)
+Track everything with `job-tracker` and `application-tracker-spreadsheet`, then
+use `salary-research`, `salary-negotiator`, and `offer-evaluator` once offers
+arrive.
 
 ---
 
