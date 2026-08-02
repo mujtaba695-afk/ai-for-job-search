@@ -1,4 +1,4 @@
-# 🎯 Open ATS Career Engine & Executive Resume Generator
+# 🎯 AI for Job Search
 
 An open-source, automated **job search, live ATS verification, and executive application package generator** designed for senior professionals, performance marketing leads, and growth marketers.
 
@@ -31,8 +31,8 @@ Produces strategic, executive cover letters mapping candidate achievements to th
 
 ```bash
 # Clone the repository
-git clone https://github.com/mujtaba695-afk/open-ats-career-engine.git
-cd open-ats-career-engine
+git clone https://github.com/mujtaba695-afk/ai-for-job-search.git
+cd ai-for-job-search
 
 # Set up Virtual Environment
 python3 -m venv .venv
