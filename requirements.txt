@@ -1,0 +1,9 @@
+# Optional. Nothing in this repository imports these — the skills are Markdown
+# instruction modules, and scripts/preflight_check.py uses only the standard library.
+#
+# Install them once you start generating documents: several skills describe
+# producing .docx and .pdf application packages, and these are the libraries
+# they assume an agent will reach for.
+
+python-docx>=1.1.0    # .docx resume and cover letter output
+playwright>=1.40.0    # HTML -> PDF rendering (also run: playwright install chromium)

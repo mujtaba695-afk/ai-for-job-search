@@ -1,0 +1,16 @@
+# Personal profile data — never commit real contact details
+config/master_profile.json
+
+# Generated application artifacts
+*.pdf
+*.docx
+media__*.png
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS
+.DS_Store

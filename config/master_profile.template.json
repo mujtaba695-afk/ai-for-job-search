@@ -1,0 +1,38 @@
+{
+  "candidate": {
+    "full_name": "Your Name",
+    "target_title": "Your Target Role",
+    "location": "City, Country",
+    "phone": "+00 000 000 0000",
+    "email": "you@example.com",
+    "linkedin": "linkedin.com/in/your-profile",
+    "portfolio": "github.com/your-username"
+  },
+  "executive_summary": "Three to four sentences. Lead with years of experience and the scope you own, then the outcomes you are accountable for, then the channels or tooling you work in. Use real numbers only.",
+  "work_experience": [
+    {
+      "company": "Company Name",
+      "title": "Your Title",
+      "location": "City, Country",
+      "dates": "YYYY - Present",
+      "bullets": [
+        "Open with the action and the scope you owned, then the measured result. Shape: Managed $X/month across <channels>, driving +Y% <metric> while reducing <cost metric> by Z%.",
+        "One specific, verifiable number per bullet beats several vague claims."
+      ]
+    },
+    {
+      "company": "Previous Company",
+      "title": "Previous Title",
+      "location": "City, Country",
+      "dates": "YYYY - YYYY",
+      "bullets": [
+        "Keep every bullet in the same shape so a parser reads the history consistently."
+      ]
+    }
+  ],
+  "skills": {
+    "category_one": ["Skill", "Skill", "Skill"],
+    "category_two": ["Tool", "Tool", "Tool"],
+    "category_three": ["Platform", "Platform", "Platform"]
+  }
+}
