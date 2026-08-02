@@ -1,0 +1,29 @@
+{
+  "candidate": {
+    "full_name": "Your Name",
+    "target_title": "Performance Marketing Lead | Paid Media & Growth Analytics",
+    "location": "City, Country",
+    "phone": "+1 234 567 8900",
+    "email": "candidate@example.com",
+    "linkedin": "linkedin.com/in/your-profile",
+    "portfolio": "github.com/your-username"
+  },
+  "executive_summary": "Data-driven Growth & Performance Marketing Lead with X+ years of experience managing $Y+ in cumulative paid acquisition spend across search, social, and display channels...",
+  "work_experience": [
+    {
+      "company": "Enterprise Company Name",
+      "title": "Performance Marketing Lead",
+      "location": "Dubai, UAE",
+      "dates": "2023 - Present",
+      "bullets": [
+        "Managed $50K/month paid acquisition spend across Google Ads, Meta, and LinkedIn, driving +34% qualified lead growth while reducing CPL by 18%.",
+        "Architected server-side tracking (sGTM) and Meta CAPI integrations, connecting offline CRM deal closures to bidding engines."
+      ]
+    }
+  ],
+  "skills": {
+    "growth_economics": ["Incrementality Testing", "Multi-Touch Attribution (MTA)", "CAC/LTV Optimization"],
+    "paid_media": ["Google Ads (PMax, SEM)", "Meta Ads", "LinkedIn Ads", "TikTok Ads"],
+    "analytics_martech": ["GA4", "sGTM", "Salesforce", "HubSpot", "Looker Studio"]
+  }
+}
